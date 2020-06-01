@@ -1,9 +1,15 @@
-# echoip
-
-[![Build Status](https://travis-ci.org/mpolden/echoip.svg)](https://travis-ci.org/mpolden/echoip)
+# echoip for arm
 
 A simple service for looking up your IP address. This is the code that powers
 https://ifconfig.co.
+
+## Note
+
+Repo has been forked from [mpolden/echoip](https://github.com/mpolden/echoip) to allow using on arm:
+
+```
+$ docker run -it -p 80:8080 pistacks/echoip:latest
+```
 
 ## Usage
 
