@@ -1,9 +1,9 @@
 # Build
-FROM golang:1.13-buster AS build
+FROM pistacks/golang:1.13.11-buster AS build
 WORKDIR /go/src/github.com/mpolden/echoip
 COPY . .
 # Must build without cgo because libc is unavailable in runtime image
-ENV GO111MODULE=on CGO_ENABLED=0
+ENV GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=arm
 RUN make
 
 # Run
